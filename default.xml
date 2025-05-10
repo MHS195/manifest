@@ -8,6 +8,8 @@
   <remote  name="maruos"
            fetch="https://github.com/maruos"
            revision="maru-0.7" />
+  <remote  name="mhs"
+           fetch="https://github.com/MHS195" />
 
   <project path="build/make" name="android_platform_build" remote="maruos" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -35,29 +37,10 @@
   <!-- Devices -->
   <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="lineage-16.0" />
 
-  <!-- START hammerhead - Nexus 5 -->
-  <project path="kernel/hammerhead" name="android_kernel_hammerhead" groups="hammerhead" remote="maruos" clone-depth="100"/>
-  <project path="device/lge/hammerhead" name="android_device_lge_hammerhead" groups="device,hammerhead,broadcom_pdk,generic_fs" remote="maruos" />
-  <!-- END hammerhead - nexus 5 -->
+  <!-- START oce - HTC U-Ultra -->
+  <project path="device/htc/oce" name="device_htc_oce" remote="mhs" revision="oce" />
+  <project path="kernel/htc/oce" name="kernel_htc_oce" remote="mhs" revision="oce" />
+  <project path="vendor/htc/oce" name="vendor_htc_oce" remote="mhs" revision="oce" />
+  <!-- END oce - HTC U-Ultra -->
 
-  <!-- START pme - HTC 10 -->
-  <project path="device/htc/pme" name="android_device_htc_pme" remote="maruos" />
-  <project path="kernel/htc/msm8996" name="android_kernel_htc_msm8996" remote="maruos" />
-  <!-- END pme - HTC 10 -->
-
-  <!-- START Sailfish/Marlin - Google Pixel / Google Pixel XL -->
-  <project path="device/google/marlin" name="android_device_google_marlin" remote="maruos" />
-  <project path="kernel/google/marlin" name="android_kernel_google_marlin" remote="maruos" />
-  <!-- END Sailfish/Marlin - Google Pixel / Google Pixel XL -->
-
-  <!-- START Wahoo/Taimen - Google Pixel 2XL -->
-  <project path="device/google/taimen" name="android_device_google_taimen" remote="maruos" />
-  <project path="device/google/wahoo" name="android_device_google_wahoo" remote="maruos" />
-  <project path="kernel/google/wahoo" name="android_kernel_google_wahoo" remote="maruos" />
-  <!-- END Wahoo/Taimen - Google Pixel 2XL -->
-
-  <!-- START sargo/bonito - Google Pixel 3a / Google Pixel 3a XL -->
-  <project path="device/google/bonito" name="android_device_google_bonito" remote="maruos" />
-  <project path="kernel/google/bonito" name="android_kernel_google_bonito" remote="maruos" />
-  <!-- END sargo/bonito - Google Pixel 3a / Google Pixel 3a XL -->
 </manifest>
