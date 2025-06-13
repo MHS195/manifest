@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="mhs" fetch="https://github.com/MHS195" />
+  <!-- Devices -->
+  <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="lineage-16.0" />
+  <project path="device/htc/oce" name="device_htc_oce" remote="mhs" revision="halium" />
+  <project path="kernel/htc/oce" name="android_kernel_htc_oce" remote="mhs" revision="halium" />
+  <project path="vendor/htc/oce" name="vendor_htc_oce" remote="mhs" revision="oce" />
+</manifest>
